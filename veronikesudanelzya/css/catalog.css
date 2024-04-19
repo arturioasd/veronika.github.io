@@ -1,0 +1,31 @@
+.filter {
+  border: 10px solid;
+  border-image-source: linear-gradient(-45deg, #0099ff, white, rgb(250, 62, 203));
+  border-image-slice: 1;
+}
+.filter__title {
+  padding: 25px 15px 5px 15px;
+  color: #0099ff;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.section-filter {
+  padding: 30px 15px;
+  border-bottom: 1px solid rgb(250, 62, 203);
+}
+.section-filter__title {
+  color: black;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  margin: 0px 0px 15px 0px;
+  min-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
