@@ -4,3 +4,11 @@ $(document).ready(function(){
         $('body').toggleClass('lock');
     })
 })
+
+$(document).ready(function(){
+    $('.filter__mobile').click(function(event){
+        $('.filter__title, .filter__body',).toggleClass('filter-swipe');
+        $('.filter__mobile').toggleClass('filter-replace')
+    })
+})
+
