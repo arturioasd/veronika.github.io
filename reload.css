@@ -46,3 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+*{
+	font-family: "Barlow", sans-serif;
+	font-weight: 400	;
+	font-style:inherit;
+}
