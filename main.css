@@ -15,9 +15,14 @@ body {
   }
 }
 
+@font-face {
+  font-family: "Plovdiv";
+  src: url("../fonts/ofont.ru_Plovdiv.ttf");
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Plovdiv", sans-serif;
 }
 
 .container {
@@ -80,37 +85,38 @@ body {
   display: -ms-inline-flexbox;
   display: inline-flex;
   background-color: white;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: auto;
-  border-radius: 10px;
+  border-radius: 40px;
   overflow: hidden;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 285px;
-          flex: 0 1 285px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  max-width: 300px;
 }
 @media (max-width: 767px) {
   .search-form {
     overflow: visible;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
   }
 }
 .search-form__text {
+  width: 100%;
+  max-width: 100%;
   margin-left: 10px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 100px;
-          flex: 1 0 100px;
   border: none;
   outline: none;
   font-size: 18px;
 }
 .search-form__btn {
+  padding-right: 10px;
   border: none;
   border-left: 1px solid #000000;
   background-color: transparent;
@@ -185,6 +191,29 @@ body {
   overflow: hidden; /* Скрываем, что выходит за пределы */
 }
 
+.card__saved {
+  position: absolute;
+  left: 25px;
+  z-index: 3;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url("/img/icons/cards-icons/card-unactive-save.svg");
+  cursor: pointer;
+}
+.card__saved:hover {
+  background-image: url("/img/icons/cards-icons/card-unactive-save-hover.svg");
+}
+@media (max-width: 767px) {
+  .card__saved {
+    left: 10px;
+  }
+}
+
+#svgimg {
+  fill: black;
+}
+
 /* Контейнер для картинки */
 .card__image {
   display: block;
@@ -247,9 +276,10 @@ body {
   background: white;
 }
 .card__size-title {
+  margin-bottom: 10px;
   text-align: center;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 100%;
 }
 .card__list-size {
@@ -343,13 +373,13 @@ body {
 @media (max-width: 767.98px) {
   .cards {
     -ms-grid-columns: (225px);
-    grid-template-columns: repeat(2, 225px);
+    grid-template-columns:repeat(2, 225px);
   }
 }
 @media (max-width: 591.98px) {
   .cards {
     -ms-grid-columns: (225px);
-    grid-template-columns: repeat(1, 225px);
+    grid-template-columns:repeat(1, 225px);
   }
 }
 @media (max-width: 767px) {
@@ -362,7 +392,7 @@ body {
   min-width: 270px;
   max-width: 100%;
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   height: auto;
   position: sticky;
   top: 100px;
@@ -370,82 +400,9 @@ body {
 @media (max-width: 767px) {
   .filter {
     position: fixed;
-    z-index: 10;
+    z-index: 3;
     width: 100%;
     top: 0;
-  }
-}
-@media (max-width: 767px) {
-  .filter__mobile {
-    display: block;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    z-index: 3;
-    top: 190px;
-    left: 50px;
-    -webkit-transition: all 200ms ease 0s;
-    transition: all 200ms ease 0s;
-  }
-  .filter__mobile.delete-element {
-    scale: 0;
-  }
-  .filter__mobile.filter-replace {
-    top: 20px;
-    left: calc(90% - 10px);
-    z-index: 12;
-  }
-  .filter__mobile span {
-    position: absolute;
-    height: 2px;
-    top: -1px;
-    right: 20px;
-    -webkit-transition: all 250ms ease 0s;
-    transition: all 250ms ease 0s;
-    font-size: 18px;
-  }
-  .filter__mobile span::before {
-    content: "фильтр";
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-  }
-  .filter__mobile::before, .filter__mobile::after {
-    content: "";
-    background: rgb(0, 0, 0);
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    -webkit-transition: all 800ms ease 0s;
-    transition: all 800ms ease 0s;
-  }
-  .filter__mobile::before {
-    left: 0;
-    top: 2px;
-    -webkit-transform: rotate(50deg);
-            transform: rotate(50deg);
-  }
-  .filter__mobile::after {
-    bottom: 2px;
-    -webkit-transform: rotate(-50deg);
-            transform: rotate(-50deg);
-  }
-  .filter__mobile.filter-replace::before {
-    left: 100%;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    top: 9px;
-  }
-  .filter__mobile.filter-replace::after {
-    left: 100%;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    bottom: 9px;
-  }
-  .filter__mobile.filter-replace span {
-    -webkit-transform: scale(0);
-            transform: scale(0);
   }
 }
 .filter__title {
@@ -453,7 +410,6 @@ body {
   color: #0099ff;
   font-size: 24px;
   font-weight: 700;
-  font-style: italic;
   text-transform: uppercase;
   letter-spacing: 0.6px;
   -webkit-transition: all 300ms ease 0s;
@@ -522,6 +478,9 @@ body {
   border-color: rgba(250, 62, 203, 0.233);
 }
 
+.section-filter {
+  padding-top: 50px;
+}
 .section-filter__title {
   border-bottom: 1px solid #0099ff;
   margin: 30px 0px 0px 0px;
