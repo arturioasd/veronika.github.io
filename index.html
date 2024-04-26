@@ -4,13 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="reload.css">
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="reload.css">     
+    <link rel="stylesheet" href="header.css">     
     <link rel="stylesheet" href="main.css">
     <title>title</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="js/jq.js" defer></script>
     <script src="js/spoller.js" defer></script>
     <script src="js/header.js" defer></script>
@@ -20,20 +17,32 @@
     <header class="header">
             <div class="container">
                 <div class="header__body">
-                    <a href="#" class="header__logo">
-                        <img src="img/logo/logo.jpg" alt="#">
-                    </a>
-                    <p class="header__title">Прокат костюмов</p>
-                    <div class="header__burger">
-                        <span></span>
+                    <div class="header__logo">
+                        <a href="#" class="header__logo-img"><img src="img/logo/logo.jpg" alt="#"></a>
+                        <p class="header__title">Прокат костюмов</p>
+                    </div>
+                    <div class="header__row">
+                        <div class="header__saved">
+                            <div class="header__saved-img">
+                                <a href="#"><img src="img/icons/header__heart-icons.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="header__filter">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
                     </div>
                     <nav class="header__menu">
                         <ul class="header__list">
-                            <li><a href="#" class="header__link">Главная</a></li>
-                            <li><a href="#" class="header__link">Каталог</a></li>
-                            <li><a href="#" class="header__link">О нас</a></li>
-                            <li><a href="#" class="header__link">Местонахождение</a></li>
-                            <li><a href="#" class="header__link">Связь</a></li>
+                            
+                            <a href="#" class="header__link"><li>Главная</li></a>
+                            <a href="#" class="header__link"><li>Каталог</li></a>
+                            <a href="#" class="header__link"><li>о нас</li></a>
+                            <a href="#" class="header__link"><li>связь</li></a>
                         </ul>
                     </nav>
                 </div>
@@ -45,8 +54,8 @@
             <div class="container">
                 <div class="catalog__header">
                     <div class="search-form">
-            <input class="search-form__text" placeholder="Искать" type="text">
-            <button class="search-form__btn" ><img src="img/icons/search-icon.svg" alt="посик.." class="search-form__img"></button>
+            <input class="search-form__text" placeholder="Поиск..." type="text">
+            <button class="search-form__btn" ><img src="img/icons/search-icon.svg" alt="поиск костюмов" class="search-form__img"></button>
                     </div>
                 </div>
             </div>
@@ -55,7 +64,6 @@
             <div class="container">
                 <div class="catalog">
                     <div class="filter">
-                        <div class="filter__mobile"><span></span></div>
                         <div class="filter__title">Фильтр костюмов</div>
                         <div class="filter__body _spollers">
                             <div class="filter__section section-filter">
@@ -176,146 +184,9 @@
                         <div class="card">
                             <!-- Верхняя часть -->
                             <div class="card__top">
-                                <!-- Изображение-ссылка товара -->
-                                <a href="#" class="card__image">
-                                    <img
-                                    src="img/cards/testPhoto.jpg"
-                                    alt="Костюм для проката"
-                                    />
-                                </a>
-                                <!-- Скидка на товар -->
-                            </div>
-                            <!-- Нижняя часть -->
-                            <div class="card__bottom">
-                                <div class="card__size">
-                                    <div class="card__size-title">
-                                        Размеры:
-                                    </div>
+                                <div class="card__saved">
                                     
-                                    <ul class="card__list-size">
-                                        <li>28</li>
-                                        <li>32</li>
-                                        <li>34</li>
-                                        <li>36</li>
-                                        <li>38</li>
-                                        <li>40</li>
-                                    </ul>
                                 </div>
-                            <a href="#" class="card__title">
-                                Костюм Божьей коровки
-                            </a>
-                            <!-- Кнопка добавить в корзину -->
-                            <button class="card__add">В сохраненное</button>
-                            </div>
-                        </div> 
-                        <div class="card">
-                            <!-- Верхняя часть -->
-                            <div class="card__top">
-                                <!-- Изображение-ссылка товара -->
-                                <a href="#" class="card__image">
-                                    <img
-                                    src="img/cards/testPhoto.jpg"
-                                    alt="Костюм для проката"
-                                    />
-                                </a>
-                                <!-- Скидка на товар -->
-                            </div>
-                            <!-- Нижняя часть -->
-                            <div class="card__bottom">
-                                <div class="card__size">
-                                    <div class="card__size-title">
-                                        Размеры:
-                                    </div>
-                                    
-                                    <ul class="card__list-size">
-                                        <li>28</li>
-                                        <li>32</li>
-                                        <li>34</li>
-                                        <li>36</li>
-                                        <li>38</li>
-                                        <li>40</li>
-                                    </ul>
-                                </div>
-                            <a href="#" class="card__title">
-                                Костюм Божьей коровки
-                            </a>
-                            <!-- Кнопка добавить в корзину -->
-                            <button class="card__add">В сохраненное</button>
-                            </div>
-                        </div> 
-                        <div class="card">
-                            <!-- Верхняя часть -->
-                            <div class="card__top">
-                                <!-- Изображение-ссылка товара -->
-                                <a href="#" class="card__image">
-                                    <img
-                                    src="img/cards/testPhoto.jpg"
-                                    alt="Костюм для проката"
-                                    />
-                                </a>
-                                <!-- Скидка на товар -->
-                            </div>
-                            <!-- Нижняя часть -->
-                            <div class="card__bottom">
-                                <div class="card__size">
-                                    <div class="card__size-title">
-                                        Размеры:
-                                    </div>
-                                    
-                                    <ul class="card__list-size">
-                                        <li>28</li>
-                                        <li>32</li>
-                                        <li>34</li>
-                                        <li>36</li>
-                                        <li>38</li>
-                                        <li>40</li>
-                                    </ul>
-                                </div>
-                            <a href="#" class="card__title">
-                                Костюм Божьей коровки
-                            </a>
-                            <!-- Кнопка добавить в корзину -->
-                            <button class="card__add">В сохраненное</button>
-                            </div>
-                        </div> 
-                        <div class="card">
-                            <!-- Верхняя часть -->
-                            <div class="card__top">
-                                <!-- Изображение-ссылка товара -->
-                                <a href="#" class="card__image">
-                                    <img
-                                    src="img/cards/testPhoto.jpg"
-                                    alt="Костюм для проката"
-                                    />
-                                </a>
-                                <!-- Скидка на товар -->
-                            </div>
-                            <!-- Нижняя часть -->
-                            <div class="card__bottom">
-                                <div class="card__size">
-                                    <div class="card__size-title">
-                                        Размеры:
-                                    </div>
-                                    
-                                    <ul class="card__list-size">
-                                        <li>28</li>
-                                        <li>32</li>
-                                        <li>34</li>
-                                        <li>36</li>
-                                        <li>38</li>
-                                        <li>40</li>
-                                    </ul>
-                                </div>
-                            <a href="#" class="card__title">
-                                Костюм Божьей коровки
-                            </a>
-                            <!-- Кнопка добавить в корзину -->
-                            <button class="card__add">В сохраненное</button>
-                            </div>
-                        </div> 
-                        <div class="card">
-                            <!-- Верхняя часть -->
-                            <div class="card__top">
                                 <!-- Изображение-ссылка товара -->
                                 <a href="#" class="card__image">
                                     <img
@@ -328,7 +199,7 @@
                             <!-- Нижняя часть -->
                             <div class="card__bottom">
                                 <a href="#" class="card__title">
-                                    Костюм Божьей коровки
+                                    Божья коровка
                                 </a>
                                 <div class="card__size">
                                     <div class="card__size-title">
@@ -351,6 +222,9 @@
                         <div class="card">
                             <!-- Верхняя часть -->
                             <div class="card__top">
+                                <div class="card__saved">
+                                    
+                                </div>
                                 <!-- Изображение-ссылка товара -->
                                 <a href="#" class="card__image">
                                     <img
@@ -363,7 +237,7 @@
                             <!-- Нижняя часть -->
                             <div class="card__bottom">
                                 <a href="#" class="card__title">
-                                    Костюм Божьей коровки
+                                    Божья коровка
                                 </a>
                                 <div class="card__size">
                                     <div class="card__size-title">
@@ -386,6 +260,9 @@
                         <div class="card">
                             <!-- Верхняя часть -->
                             <div class="card__top">
+                                <div class="card__saved">
+                                    
+                                </div>
                                 <!-- Изображение-ссылка товара -->
                                 <a href="#" class="card__image">
                                     <img
@@ -398,7 +275,7 @@
                             <!-- Нижняя часть -->
                             <div class="card__bottom">
                                 <a href="#" class="card__title">
-                                    Костюм Божьей коровки
+                                    Божья коровка
                                 </a>
                                 <div class="card__size">
                                     <div class="card__size-title">
@@ -421,6 +298,9 @@
                         <div class="card">
                             <!-- Верхняя часть -->
                             <div class="card__top">
+                                <div class="card__saved">
+                                    
+                                </div>
                                 <!-- Изображение-ссылка товара -->
                                 <a href="#" class="card__image">
                                     <img
@@ -433,7 +313,7 @@
                             <!-- Нижняя часть -->
                             <div class="card__bottom">
                                 <a href="#" class="card__title">
-                                    Костюм Божьей коровки
+                                    Божья коровка
                                 </a>
                                 <div class="card__size">
                                     <div class="card__size-title">
@@ -453,76 +333,6 @@
                             <button class="card__add">В сохраненное</button>
                             </div>
                         </div>
-                        <div class="card">
-                            <!-- Верхняя часть -->
-                            <div class="card__top">
-                                <!-- Изображение-ссылка товара -->
-                                <a href="#" class="card__image">
-                                    <img
-                                    src="img/cards/testPhoto.jpg"
-                                    alt="Костюм для проката"
-                                    />
-                                </a>
-                                <!-- Скидка на товар -->
-                            </div>
-                            <!-- Нижняя часть -->
-                            <div class="card__bottom">
-                                <a href="#" class="card__title">
-                                    Костюм Божьей коровки
-                                </a>
-                                <div class="card__size">
-                                    <div class="card__size-title">
-                                        Размеры:
-                                    </div>
-                                    
-                                    <ul class="card__list-size">
-                                        <li>28</li>
-                                        <li>32</li>
-                                        <li>34</li>
-                                        <li>36</li>
-                                        <li>38</li>
-                                        <li>40</li>
-                                    </ul>
-                                </div>
-                            <!-- Кнопка добавить в корзину -->
-                            <button class="card__add">В сохраненное</button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <!-- Верхняя часть -->
-                            <div class="card__top">
-                                <!-- Изображение-ссылка товара -->
-                                <a href="#" class="card__image">
-                                    <img
-                                    src="img/cards/testPhoto.jpg"
-                                    alt="Костюм для проката"
-                                    />
-                                </a>
-                                <!-- Скидка на товар -->
-                            </div>
-                            <!-- Нижняя часть -->
-                            <div class="card__bottom">
-                                <a href="#" class="card__title">
-                                    Костюм Божьей коровки
-                                </a>
-                                <div class="card__size">
-                                    <div class="card__size-title">
-                                        Размеры:
-                                    </div>
-                                    
-                                    <ul class="card__list-size">
-                                        <li>28</li>
-                                        <li>32</li>
-                                        <li>34</li>
-                                        <li>36</li>
-                                        <li>38</li>
-                                        <li>40</li>
-                                    </ul>
-                                </div>
-                            <!-- Кнопка добавить в корзину -->
-                            <button class="card__add">В сохраненное</button>
-                            </div>
-                        </div>                                                                                   
                     </div>
                 </div>
             </div>
